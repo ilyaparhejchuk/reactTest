@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./pictures/logo.svg";
+import catOne from "./pictures/catOne.svg";
+import dogOne from "./pictures/dogOne.svg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={catOne} className="App-logo" alt="logo" />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={dogOne} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
+        <img src={catOne} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>React Zoo shop</p>
+        <img src={logo} className="App-logo-reverse" alt="logo" />
+        <img src={catOne} className="App-logo-reverse" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
+        <img src={dogOne} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo-reverse" alt="logo" />
+        <img src={catOne} className="App-logo-reverse" alt="logo" />
       </header>
+      <TestSection />
+    </div>
+  );
+}
+
+function TestSection() {
+  return (
+    <div className="Test-section">
+      <p>My first text in component</p>
     </div>
   );
 }
