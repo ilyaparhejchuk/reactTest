@@ -14,23 +14,26 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <img src={catOne} className="App-logo" alt="logo" />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>React Zoo shop</p>
+        <p className="shop-name">React Zoo shop</p>
         <img src={logo} className="App-logo-reverse" alt="logo" />
         <img src={catOne} className="App-logo-reverse" alt="logo" />
-        <img src={logo} className="App-logo" alt="logo" />
-        <img src={dogOne} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo-reverse" alt="logo" />
+        <img src={dogOne} className="App-logo-reverse" alt="logo" />
         <img src={logo} className="App-logo-reverse" alt="logo" />
         <img src={catOne} className="App-logo-reverse" alt="logo" />
       </header>
-      <TestSection />
+      <MenuSection />
     </div>
   );
 }
 
-function TestSection() {
+function MenuSection() {
   return (
-    <div className="Test-section">
-      <p>My first text in component</p>
+    <div className="Menu-section">
+      <span>Home</span>
+      <span>Products</span>
+      <span>Play to win</span>
+      <span>About us</span>
     </div>
   );
 }
