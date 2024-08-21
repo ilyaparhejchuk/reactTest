@@ -7,20 +7,21 @@
 .App-logo {
   height: 10vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 15s linear;
 }
 
 .App-logo-reverse {
   height: 10vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 15s linear reverse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 15s linear;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .App-logo-reverse {
-    animation: App-logo-spin infinite 15s linear reverse;
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -35,18 +36,9 @@
 }
 
 .shop-name {
-    color: #ffffff; 
-    font-weight: 500;
-    font-size: 1.1em;
-  }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.1em;
 }
 
 .Menu-section {
@@ -62,21 +54,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px; 
+  gap: 50px;
   text-align: center;
 
-  span {
-    color: #ffffff; 
+  .section-option {
+    color: #ffffff;
     font-weight: 600;
     font-size: 1.2em;
     letter-spacing: 0.05em;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
   }
 
-  span:hover {
+  .section-option_gold {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .section-option_gold:hover {
+    color: #ecaf3c;
+    text-shadow: 0px 0px 30px rgba(240, 193, 39, 0.7);
+  }
+
+  .section-option__selected {
+    color: #51dfff;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 22px rgba(81, 223, 255, 1);
+    cursor: pointer;
+  }
+
+  .section-option__selected_gold {
+    color: #ecaf3c;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0px 3px 22px rgba(240, 193, 39, 1);
+    cursor: pointer;
+  }
+
+  .section-option:hover {
     color: #51dfff;
     text-shadow: 0px 0px 30px rgba(81, 223, 255, 0.6);
-    cursor: pointer;
   }
 }

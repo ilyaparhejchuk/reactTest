@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./pictures/logo.svg";
 import catOne from "./pictures/catOne.svg";
 import dogOne from "./pictures/dogOne.svg";
 import "./App.css";
+import HomeSection from "./sections/HomeSection/Home";
+import ProductSection from "./sections/ProductsSection/ProductsSection";
+import PlayToWinSection from "./sections/PlayToWinSection/PlayToWinSection";
+import AboutUsSection from "./sections/AboutUsSection/AboutUsSection";
 
 function App() {
+  const [selectedMenu, setSelectedMenu] = useState<string>("Home");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,18 +28,48 @@ function App() {
         <img src={logo} className="App-logo-reverse" alt="logo" />
         <img src={catOne} className="App-logo-reverse" alt="logo" />
       </header>
-      <MenuSection />
+
+      <MenuSection
+        selectedMenu={selectedMenu}
+        setSelectedMenu={setSelectedMenu}
+      />
+
+      {selectedMenu === "Home" && <HomeSection />}
+      {selectedMenu === "Products" && <ProductSection />}
+      {selectedMenu === "Play to win" && <PlayToWinSection />}
+      {selectedMenu === "About us" && <AboutUsSection />}
     </div>
   );
 }
 
-function MenuSection() {
+function MenuSection({
+  selectedMenu,
+  setSelectedMenu,
+}: {
+  selectedMenu: string;
+  setSelectedMenu: React.Dispatch<React.SetStateAction<string>>;
+}) {
+  const menuItems = ["Home", "Products", "Play to win", "About us"];
+
   return (
     <div className="Menu-section">
-      <span>Home</span>
-      <span>Products</span>
-      <span>Play to win</span>
-      <span>About us</span>
+      {menuItems.map((item) => (
+        <span
+          key={item}
+          className={
+            selectedMenu === item
+              ? selectedMenu === "Play to win"
+                ? "section-option__selected_gold"
+                : "section-option__selected"
+              : item === "Play to win"
+              ? "section-option_gold"
+              : "section-option"
+          }
+          onClick={() => setSelectedMenu(item)}
+        >
+          {item}
+        </span>
+      ))}
     </div>
   );
 }
