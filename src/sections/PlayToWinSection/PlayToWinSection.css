@@ -1,0 +1,53 @@
+.play-to-win-section {
+  margin: 60px 170px;
+}
+
+.input-code-section {
+  margin-top: 120px;
+}
+
+.input-code {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #282c34;
+  color: #51dfff;
+  font-size: 30px;
+  box-shadow: 0px -5px 35px 17px rgba(81, 223, 255, 0.4);
+  outline: none;
+  text-align: center;
+}
+
+.input-code::placeholder {
+  color: #51dfff;
+  opacity: 0.7;
+}
+
+.apply-button {
+  margin-top: 50px;
+  background-color: #3985c4;
+  color: #51dfff;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px -5px 35px 17px rgba(81, 223, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #3985c4;
+  box-shadow: 0 0 20px #51dfff, 0 0 40px #51dfff, 0 0 60px #51dfff;
+}
+
+.apply-button:active {
+  background-color: #51dfff;
+  color: #1a4149;
+  box-shadow: 0 0 20px #51dfff, 0 0 40px #51dfff, 0 0 60px #51dfff;
+  transform: scale(0.98);
+}
